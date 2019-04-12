@@ -40,7 +40,7 @@ public final class Hello extends HttpServlet {
         writer.println("<table border=\"0\" cellpadding=\"10\">");
         writer.println("<tr>");
         writer.println("<td>");
-        writer.println("<h1>CICD Servlet ALPTF Demo 2019-03-13 </h1>");
+        writer.println("<h1>CICD Servlet test 2 2019-04-12 </h1>");
         writer.println("</td>");
         writer.println("</tr>");
         writer.println("</table>");
