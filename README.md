@@ -1,2 +1,0 @@
-# cicdjavademo
-CICD JAVA DEMO
