@@ -1,0 +1,24 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  creationTimestamp: null
+  name: cmscaf-configmap
+objects:
+- apiVersion: v1
+  data:
+    cmscaf_cms_cache_svc_uri: ${cmscaf_cms_cache_svc_uri}
+    cmscaf_namespace_env: ${CICD_DEPLOYNS}
+    cmscaf_als_config_paramfile: ${cmscaf_als_config_paramfile}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: null
+    labels:
+      func: cmscaf
+    name: cmscaf-configmap
+parameters:
+ - name: cmscaf_cms_cache_svc_uri
+   description: CMS cloud application framework cms-cache-service endpoint
+   required: true
+ - name: cmscaf_als_config_paramfile
+   description: CMS cloud application framework als config file
+   required: true

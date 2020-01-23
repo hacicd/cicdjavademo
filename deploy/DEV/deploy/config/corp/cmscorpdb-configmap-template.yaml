@@ -1,0 +1,19 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  creationTimestamp: null
+  name: cmscorpdb-configmap
+objects:
+- apiVersion: v1
+  data:
+    cmscorpdb_mongo_cache_rw_ds: ${cmscorpdb_mongo_cache_rw_ds}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: null
+    labels:
+      func: cmscorpdb
+    name: cmscorpdb-configmap
+parameters:
+ - name: cmscorpdb_mongo_cache_rw_ds
+   description: mongodb RW database connection
+   required: true

@@ -1,0 +1,23 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  creationTimestamp: null
+  name: cms-cache-svc-configmap
+objects:
+- apiVersion: v1
+  data:
+    application.properties: |
+      server.port=8080
+      spring.data.mongodb.uri=${cmscorpdb_mongo_cache_rw_ds}
+      spring.data.mongodb.username=${cms_cache_svc_mongo_cache_rw_ds_account}
+      spring.data.mongodb.password=${cms_cache_svc_mongo_cache_rw_ds_passcode}
+      spring.data.mongodb.database=cache
+      cms-cache-svc.cache_access_encryption_hdr=SESSION_ACCESS_HDR
+      cms-cache-svc.cache_access_encryption_ver=V1,V2
+      cms-cache-svc.cache_access_encryption_key=ENCRYPTION_key_1
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: null
+    labels:
+      app: cms-cache-svc
+    name: cms-cache-svc-configmap
