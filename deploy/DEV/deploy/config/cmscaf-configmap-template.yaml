@@ -7,13 +7,12 @@ objects:
 - apiVersion: v1
   data:
     cmscaf_cms_cache_svc_uri: ${cmscaf_cms_cache_svc_uri}
-    cmscaf_namespace_env: ${CICD_DEPLOYNS}
     cmscaf_als_config_paramfile: ${cmscaf_als_config_paramfile}
   kind: ConfigMap
   metadata:
     creationTimestamp: null
     labels:
-      func: cmscaf
+      func: cmscaf-configmap
     name: cmscaf-configmap
 parameters:
  - name: cmscaf_cms_cache_svc_uri

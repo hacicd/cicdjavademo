@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    labels:
+        app: cms-common-hosp-svc
+    name: cms-common-hosp-svc-configmap
+data:
+    application.properties: |-
+       server.port=8080
+       
+       spring.jpa.hibernate.ddl-auto=none
+       spring.jpa.databasePlatform=org.hibernate.dialect.SybaseDialect
+       spring.jpa.properties.hibernate.show_sql=false
+       spring.jpa.properties.hibernate.format_sql=false
+       spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SybaseDialect
+       spring.jpa.properties.hibernate.type=info
+       
+       # Sybase IP DB
+       spring.datasource.url=jdbc:jtds:sybase://${CMSIP_DS}
+       spring.datasource.username=${CMSIP_USERNAME}
+       spring.datasource.password=${CMSIP_PASSWORD}"

@@ -12,9 +12,9 @@ objects:
       spring.data.mongodb.username=${cms_cache_svc_mongo_cache_rw_ds_account}
       spring.data.mongodb.password=${cms_cache_svc_mongo_cache_rw_ds_passcode}
       spring.data.mongodb.database=cache
-      cms-cache-svc.cache_access_encryption_hdr=SESSION_ACCESS_HDR
-      cms-cache-svc.cache_access_encryption_ver=V1,V2
-      cms-cache-svc.cache_access_encryption_key=ENCRYPTION_key_1
+      cms-cache-svc.cache_access_encryption_hdr=${session_access_hdr}
+      cms-cache-svc.cache_access_encryption_ver=${version}
+      cms-cache-svc.cache_access_encryption_key=${encryption_key}
   kind: ConfigMap
   metadata:
     creationTimestamp: null
@@ -22,5 +22,12 @@ objects:
       app: cms-cache-svc
     name: cms-cache-svc-configmap
 parameters:
- - name: CICD_DEPLOYNS
-   description: Deploy Namespace
+ - name: session_access_hdr
+   description: session header setting for encryption
+   required: true
+ - name: version
+   description: version for encrypt the access code
+   required: true
+ - name: encryption_key
+   description: key to encrypt the access code
+   required: true
