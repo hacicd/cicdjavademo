@@ -1,0 +1,33 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: cicd-demo
+    version: v1
+  name: cicd-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cicd-demo
+  template:
+    metadata:
+      labels:
+        app: cicd-demo
+        version: v1
+    spec:
+      containers:
+        - name: cicd-demo
+          image: ${image}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 600m
+              memory: 1536Mi
+            requests:
+              cpu: 200m
+              memory: 512Mi
+          emptyDir: {}
