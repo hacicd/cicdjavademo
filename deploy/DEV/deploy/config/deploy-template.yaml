@@ -24,7 +24,7 @@ objects:
     replicas: 1
     revisionHistoryLimit: 10
     selector:
-      app: cicd-demo-app-${version}
+      app: cicd-demo-app
       version: ${version}
     strategy:
       activeDeadlineSeconds: 21600
@@ -39,7 +39,7 @@ objects:
     template:
       metadata:
         labels:
-          app: cicd-demo-app-${version}
+          app: cicd-demo-app
           version: ${version}
       spec:
         containers:
