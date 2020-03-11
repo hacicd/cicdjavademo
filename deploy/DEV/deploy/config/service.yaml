@@ -11,6 +11,6 @@ spec:
       protocol: TCP
       targetPort: 8080
   selector:
-    deploymentconfig: router
+    app: cicd-demo-app
   sessionAffinity: None
   type: ClusterIP
