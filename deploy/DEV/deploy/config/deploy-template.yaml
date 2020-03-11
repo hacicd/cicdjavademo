@@ -17,7 +17,7 @@ objects:
   metadata:
     annotations: {}
     labels:
-      app: cicd-demo-app-${version}
+      app: cicd-demo-app
       version: ${version}
     name: cicd-demo-app-${version}
   spec:
