@@ -46,6 +46,12 @@ objects:
           - env:
               - name: bgcolour
                 value: ${bgcolour}
+          - env:
+              - name: hospital
+                value: ${hospital}
+          - env:
+              - name: version
+                value: ${version}                
             image: '{image:tag}'
             imagePullPolicy: Always
             name: cicd-demo-app-${version}
