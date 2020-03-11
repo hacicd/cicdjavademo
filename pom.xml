@@ -4,7 +4,7 @@
   <groupId>hk.org.ha.cicd</groupId>
   <artifactId>cicd-javademo-webapp</artifactId>
   <packaging>war</packaging>
-  <version>1.0.1</version>
+  <version>1.0</version>
   <name>cicd-javademo-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
