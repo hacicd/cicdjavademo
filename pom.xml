@@ -22,9 +22,15 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+<<<<<<< HEAD
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>3.1.0</version>
+=======
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+>>>>>>> b303108f4d50bbe17bb11976379efdd0b3e0f66a
     </dependency>
   </dependencies>
   <build>
