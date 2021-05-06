@@ -28,7 +28,7 @@ public final class Hello extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
       throws IOException, ServletException {
-        String sqlStr="select * from abc where hosp=" + System.getenv("hospital")
+        String sqlStr="select * from abc where hosp=" + System.getenv("hospital");
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();        
         writer.println("<html>");
